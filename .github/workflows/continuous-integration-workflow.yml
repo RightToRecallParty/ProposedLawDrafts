@@ -32,4 +32,10 @@ jobs:
     - run: |
         for changed_file in ${{ steps.files.outputs.all }}; do
         echo "Do something with this ${changed_file}."
+        if [[ "${changed_file}" =~ ".txt"$ ]]; then
+          echo "Generating docx file" 
+          python app.py ${changed_file}
+        else
+          echo "${changed_file}" is NOT a TXT file "  
+        fi;
         done
