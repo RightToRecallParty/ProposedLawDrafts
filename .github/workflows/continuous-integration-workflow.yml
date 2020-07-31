@@ -39,3 +39,7 @@ jobs:
           echo "${changed_file} is NOT a TXT file"  
         fi;
         done
+    - uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: ./*.docx
