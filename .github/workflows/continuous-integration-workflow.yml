@@ -36,6 +36,6 @@ jobs:
           echo "Generating docx file" 
           python app.py ${changed_file}
         else
-          echo "${changed_file}" is NOT a TXT file "  
+          echo "${changed_file} is NOT a TXT file"  
         fi;
         done
