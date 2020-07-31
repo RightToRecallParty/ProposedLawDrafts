@@ -20,6 +20,9 @@ jobs:
       uses: VaultVulp/action-pipenv@v2.0.1
       with:
         command: install -d # Install all dependencies, including development ones
+    - name: activate pipenv shell
+      run: |
+        pipenv shell
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
